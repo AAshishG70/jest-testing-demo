@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, fireEvent } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import SignUpForm from "./SignUpForm";
 
 describe("Sign up form component ", () => {
@@ -12,6 +12,6 @@ describe("Sign up form component ", () => {
     fireEvent.change(nameInput, { target: { value: "React" } });
     fireEvent.change(emailInput, { target: { value: "test@gmail.com" } });
     expect(nameInput.value).toBe("React");
-    expect(nameInput.value).toBe("test@gmail.com");
+    expect(emailInput.value).toBe("test@gmail.com");
   });
 });
